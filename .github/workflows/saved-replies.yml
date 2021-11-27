@@ -1,0 +1,15 @@
+on:
+  issues:
+    types: [labeled]
+jobs:
+  saveLabels:
+    runs-on: ubuntu-latest
+    steps:
+      - if: ${{ github.event.label.name == 'status already-fixed' }}
+        name: Already fixed
+        uses: kerhub/saved-replies@v0.2
+        with:
+          reply: |
+            Thanks for reporting this issue. Luckily, it has already been fixed in one of the recent releases. Please update to the most recent version to resolve the problem.
+
+            If the problem persists in your application after upgrading, please open a new issue, provide a simple repository reproducing the problem, and describe the difference between the expected and current behavior. You can use `create-nx-workspace my-issue` and then `ng g app my-app` to create a new project where you reproduce the problem.
