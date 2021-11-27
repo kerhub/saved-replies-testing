@@ -1,0 +1,12 @@
+on:
+  issues:
+    types: [opened]
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: add triage label
+        uses: kerhub/saved-replies
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          labels: 'triage'
