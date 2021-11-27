@@ -9,6 +9,7 @@ jobs:
         name: Already fixed
         uses: kerhub/saved-replies@v0.2
         with:
+        token: ${{ secrets.GITHUB_TOKEN }}
           reply: |
             Thanks for reporting this issue. Luckily, it has already been fixed in one of the recent releases. Please update to the most recent version to resolve the problem.
 
