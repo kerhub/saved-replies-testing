@@ -3,7 +3,7 @@ on:
     types: [labeled]
 jobs:
   scopeCore:
-    if ${{ github.event.label.name }} == 'scope: core'
+    if: "${{ github.event.label.name == 'scope: core' }}"
     runs-on: ubuntu-latest
     steps:
       - name: add core scope
