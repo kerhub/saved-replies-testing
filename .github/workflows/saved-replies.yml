@@ -7,7 +7,7 @@ jobs:
     steps:
       - if: "${{ github.event.label.name == 'status: already-fixed' }}"
         name: Already fixed
-        uses: kerhub/saved-replies@v0.2.7
+        uses: kerhub/saved-replies@v0.2.8
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           reply: |
