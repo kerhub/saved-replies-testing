@@ -9,4 +9,4 @@ jobs:
         uses: kerhub/saved-replies@v0.2.10
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          addedLabels: 'triage'
+          addedLabels: 'triageee'
