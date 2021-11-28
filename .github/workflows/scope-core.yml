@@ -1,0 +1,14 @@
+on:
+  issues:
+    types: [labeled]
+jobs:
+  scopeCore:
+    if ${{ github.event.label.name }} == 'scope: core'
+    runs-on: ubuntu-latest
+    steps:
+      - name: add core scope
+        uses: kerhub/saved-replies@v0.3.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          removedLabels: 'triage'
+          addedAssignees: 'geromegrignon'
