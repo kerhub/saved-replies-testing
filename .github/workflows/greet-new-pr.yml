@@ -1,0 +1,12 @@
+on:
+  pull_request:
+    types: [opened]
+jobs:
+  greetings:
+    runs-on: ubuntu-latest
+    steps:
+      - name: greet the author
+        uses: kerhub/saved-replies@v0.3.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          reply: 'Hi @{{ github.event.user.login }}, thanks for contributing to this project!'
