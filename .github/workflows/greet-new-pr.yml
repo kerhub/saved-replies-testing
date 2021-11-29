@@ -9,4 +9,4 @@ jobs:
         uses: kerhub/saved-replies@v0.3.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          reply: 'Hi @{{ github.event.user.login }}, thanks for contributing to this project!'
+          reply: 'Hi @${{ github.event.user.login }}, thanks for contributing to this project!'
