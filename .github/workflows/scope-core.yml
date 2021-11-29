@@ -11,4 +11,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           removedLabels: 'triage'
-          addedAssignees: 'geromegrignon'
+          assigneesAdded: 'geromegrignon'
