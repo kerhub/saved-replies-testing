@@ -1,0 +1,14 @@
+on:
+  pull_request:
+    types: [labeled]
+jobs:
+  closePR:
+    if: "${{github.event.label.name == 'out of scope' }}"
+    runs-on: ubuntu-latest
+    steps:
+      - name: close the pull request
+        uses: kerhub/saved-replies@v0.3.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          state: 'closed'
+          reply: 'The content of this contribution is out of the scope of the project'
