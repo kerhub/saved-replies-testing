@@ -1,0 +1,17 @@
+on:
+  issues:
+    types: [opened]
+jobs:
+  closeEmptyIssues:
+    if: "${{ github.event.issue.body == '' }}"
+    runs-on: ubuntu-latest
+    steps:
+      - name: close empty issues
+        uses: kerhub/saved-replies@v1.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          state: 'closed'
+          reply: |
+            Your feedback misses minimal context to provide you an answer
+
+            Please open a new issue using one of our templates available [here](https://github.com/stackblitz/core/issues/new/choose)
