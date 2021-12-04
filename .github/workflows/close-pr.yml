@@ -11,4 +11,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           state: 'closed'
-          reply: The content of this contribution is out of the scope of the project
+          reply: 'The content of this contribution is out of the scope of the project'
